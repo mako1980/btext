@@ -24,6 +24,13 @@ function show_msg(m) {
   $('.msg').fadeOut(2000);
 }
 
+/* ---------- ウィンドウ操作 ---------- */
+
+/* ブラウザ閉じる操作時の警告 */
+$(window).on("beforeunload",function(e){
+    return "";
+});
+
 /* ---------- ボタン・チェックボックス ---------- */
 
 /* fontsize */
@@ -69,7 +76,7 @@ $(function() {
   });
 });
 
-/* delete */
+/* Clear */
 $(function() {
   $('#del').on('click', function(){
     $('#input_area').val("");
